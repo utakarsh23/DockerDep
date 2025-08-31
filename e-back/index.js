@@ -5,7 +5,7 @@ const app = express();
 app.get("/from-python", async (req, res) => {
     try {
         console.log("about to call")
-        const response = await fetch("http://localhost:7777/hello");
+        const response = await fetch("http://127.0.0.1:7777");
         console.log("called")
         const text = await response.text();
         res.send(`Express got this: ${text}`);
